@@ -1,0 +1,63 @@
+1.Git flow là gì?
+    Git-flow là một tiện ích mở rộng của git, giúp các thao tác trên repository trở lên dễ
+    dàng và hiệu quả hơn dựa trên mô hình phân nhánh của Vincent Drissen.
+    Git-flow hoạt động dựa trên các thao tác gộp nhánh. Nó không thực hiện các thao tác
+    sắp xếp commits trên các nhánh tính năng.
+2.Khởi tạo
+    Sau khi di chuyển tới thư mục dự án, chạy lệnh sau để khởi tạo git-flow.
+        git flow init
+3.Làm việc với các chức năng
+    -Bắt đầu quá trình phát triển một chức năng mới
+        Khi khởi tạo git-flow, đầu tiên sẽ làm việc với develop
+        Đầu tiên chúng ta sẽ tạo ra một nhánh mới từ 'develop'.
+            git flow feature start MYFEATURE
+        Lệnh trên sẽ tạo ra một nhánh mới 'MYFEATURE' từ nhánh 'develop' và tự động chuyển
+        qua nhánh này.
+    -Sau đó chúng ta sẽ làm việc với nhánh MYFEATURE
+    -Kết thúc quá trình phát triển một chức năng
+        Điều này xảy ra sau khi đã phát triển xong một chức năng(ví dụ như MYFEATURE), lệnh
+        kết thúc quá trình phát triển chức năng sẽ tự động thực hiện các thao tác:
+            -Gộp nhánh chức năng vào nhánh 'develop'
+            -Xóa nhánh chức năng
+            -Chuyển sang nhánh 'develop'
+                git flow feature finish MYFEATURE
+    -Đấy mã nguồn của chức năng lên máy chủ
+        Khi bạn làm việc với những người khác trên cùng một chức năng, bạn sẽ cần đẩy (push)
+        phần mã nguồn của bạn cho chức năng đó lên máy chủ (remote) để những người khác có
+        thể kéo về (pull) được.
+            git flow feature publish MYFEATURE
+            hoặc
+            git push origin
+    -Khi cần kéo mã nguồn của chức năng về để phát triển tiếp sau khi nó đã được cập nhập
+    bởi những thành viên khác (và họ đã đẩy nó lên máy chủ).
+        git flow feature pull
+4.Tạo một bản phát hành
+    -Bắt đầu một phát hành mới.
+        Để bắt đầu một phát hành mới, sử dụng lệnh release của git flow.
+        Lệnh này sẽ tạo ra nhánh 'release' từ nhánh 'develop'.
+            git flow release start RELEASE [BASE]
+        Tùy chọn [BASE] cho phép commit được một giá trị hash sha-1. Trường hợp không chỉ
+        định tùy chọn này thì HEAD sẽ được sử dụng.
+        Để công bố phần code 'release' của mình cho các thành viên khác, ta có thể làm 
+        tương tự như với công bố tính năng bằng lệnh sau:
+            git flow release publish RELEASE
+    -Kết thức release.
+        Kết thúc release là một bước lớn trong chiến lược phân nhánh git. Nó thực hiện các
+        việc sau:
+            Merge nhánh 'release' vào nhánh 'master'
+            Gắn tag ở nhánh 'master' dành cho bản release
+            Merge lại nhánh 'release' vào nhánh 'develop'
+            Xóa bỏ nhánh 'release'
+                git flow release finish RELEASE
+5.Sửa đổi nóng-hotfix
+    Sử dụng cho các trường hợp khẩn cấp cần phải sửa đổi ngay trên bản sản phẩm (nhánh
+    master).
+    Có thể tạo nhánh giải quyết khẩn cấp từ tag của nhánh 'master'.
+    -Bắt đầu hotfix
+        git flow hotfix start [BASENAME]
+     Tham số VERSION ở đây chỉ định tên của phiên bản release hotfix này. Còn tham số tùy
+     chọn basename sẽ chỉ định tên nhánh cơ bản thay cho hotfix thay vì nhánh 'master'
+    -Kết thúc hotfix
+        Kết thúc hotfix sẽ merge lại nội dung thay đổi vào nhánh 'develop' và 'master'. Ở
+        nhánh 'master' sẽ được gắn tag là phiên bản của hotfix.
+            git flow hotfix finish VERSION

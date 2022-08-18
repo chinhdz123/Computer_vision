@@ -1,0 +1,12 @@
+OpenCV (Open Source Computer Vision) là một thư viện mã nguồn mở về thị giác máy với hơn 500 hàm và hơn 2500 các thuật toán đã được tối ưu về xử
+lý ảnh, và các vấn đề liên quan tới thị giác máy. OpenCV được thiết  kế một cách tối ưu,  sử dụng  tối  đa  sứcmạnhcủa  các  dòng  chip đa  lõi..
+để thực  hiện  các  phép  tính  toán  trong  thời  gian  thực,nghĩa là tốc độ đáp ứng của nó có thể đủ nhanh cho các ứng dụng thông thường.
+OpenCV là thư viện được thiết kế đểchạy trên nhiều nền tảng khác nhau (cross-patform), nghĩa là nó  có  thể chạy  trên  hệ điều  hành  Window,
+Linux,  Mac,  iOS  ...  Việc  sử dụng  thư  viện OpenCV tuân theo các quy định về sử dụng phần mềm mã nguồn mở BSD do đó bạn có thể sử dụng thư
+viện này một cách miễn phí cho cả mục đích phi thương mại lẫn thương mại.Dự án về OpenCV được khởi động từ những năm 1999, đến năm 2000 nó được
+giới thiệu trong  một hội nghịcủa IEEE về các vấn đề trong thị giác máy và nhận dạng, tuy  nhiên bản OpenCV 1.0 mãi tới tận năm 2006 mới chính
+thức được công bố và năm 2008 bản 1.1(pre-release)  mới  được  ra  đời.  Tháng  10  năm  2009,  bản  OpenCV  thế hệ thứ hai  ra  đời(thường  gọi
+là  phiên  bản  2.x),  phiên  bản  này  có  giao  diện của C++ (khác với phiên bảntrước có giao diện của C) và có khá nhiều điểm khác biệt so với
+phiên bản thứ nhất.Thư viện OpenCV ban đầu được sự hỗ trợ từ Intel, sau đó được hỗ trợ bở Willow Garage, một phòng thí nghiệm chuyên nghiên cứu về
+công nghệ robot. Cho đến nay, OpenCV vẫn là thư viện mở, được phát triển bởi nguồn quỹ không lợi nhuận (none-profit foundation) và được sự hưởng
+ứng rất lớn của cộng đồng.
