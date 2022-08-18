@@ -1,17 +1,10 @@
 <h2>1.Introduction to Git<h2>
-    <h4>Git is officialy defined as distributed version control system(VCS).
-    In other words, it's a system that tracks changes to our project files over time.
+    <h4>Git is officialy defined as distributed version control system(VCS).In other words, it's a system that tracks changes to our project files   
+    over time. It enables us to record project changes and go back to a specific version of the tracked files, at any given point in time. This  
+    system can be used by many people to efficiently work together and collaborate on team projects, where each developer can have their own  
+    version of the project, distributed on their computer. Later on, these individual versions of the project can be merged and adapted into the  
+    main version of the project.<h4>
 
-    It enables us to record project changes and go back to a specific version of the tracked
-
-    files, at any given point in time. This system can be used by many people to efficiently 
-
-    work together and collaborate on team projects, where each developer can have their own
-
-    version of the project, distributed on their computer. Later on, these individual 
-
-    versions of the project can be merged and adapted into the main version of the project.<h4>
-    
 <h2>2.Setup instructions<h2>
     <h4>Git is primarily used via the command-line interface, which we can access with our
     system terminals.
