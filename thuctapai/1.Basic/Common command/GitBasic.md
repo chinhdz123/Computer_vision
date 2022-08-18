@@ -47,4 +47,4 @@
 <h2>6.Synchronize from the remote repositories to the local repositories<h2>
     <h4>git pull<h4>
 <h2>7.Download file from github<h2>
-    <h4>git clone <path-git><h4>
+    <h4>git clone (path-git)<h4>
